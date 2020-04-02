@@ -5,4 +5,4 @@ pipelineConfig:
       preBuild:
         steps:
           - image: busybox
-            command: hello world
+            command: echo hello world

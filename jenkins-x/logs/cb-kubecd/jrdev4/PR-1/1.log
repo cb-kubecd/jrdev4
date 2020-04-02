@@ -1,0 +1,35 @@
+
+Showing logs for build [32mcb-kubecd-jrdev4-pr-1-pr-build-m6hgj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-lb7tw[0m
+{"level":"warn","ts":1585841696.6283147,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1585841696.6290507,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mcb-kubecd-jrdev4-pr-1-pr-build-m6hgj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-kgd2d[0m
+{"level":"warn","ts":1585841697.1406243,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1585841697.141933,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mcb-kubecd-jrdev4-pr-1-pr-build-m6hgj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mcb-kubecd-jrdev4-pr-1-pr-build-m6hgj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-cb-kubecd-jrdev4-pr-1-pr-build-m6hgj-ppbtq[0m
+{"level":"warn","ts":1585841703.219361,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1585841704.2663887,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/cb-kubecd/jrdev4.git @ master in path /workspace/source"}
+
+Showing logs for build [32mcb-kubecd-jrdev4-pr-1-pr-build-m6hgj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:cc26e32f232c7f826d8aeb28bd3b8886c967bff8,1:6604231cee2ff940d1bb6f841621d4701e7f6748
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 6604231cee2ff940d1bb6f841621d4701e7f6748: cc26e32f232c7f826d8aeb28bd3b8886c967bff8:
+DEBUG: ran git fetch --unshallow origin 6604231cee2ff940d1bb6f841621d4701e7f6748: cc26e32f232c7f826d8aeb28bd3b8886c967bff8: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard cc26e32f232c7f826d8aeb28bd3b8886c967bff8
+DEBUG: ran git reset --hard cc26e32f232c7f826d8aeb28bd3b8886c967bff8 in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 6604231cee2ff940d1bb6f841621d4701e7f6748
+DEBUG: ran git merge 6604231cee2ff940d1bb6f841621d4701e7f6748 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e cc26e32f232c7f826d8aeb28bd3b8886c967bff8..HEAD
+Merged SHA 6604231cee2ff940d1bb6f841621d4701e7f6748 with commit message 'update' into base branch master
+
+Showing logs for build [32mcb-kubecd-jrdev4-pr-1-pr-build-m6hgj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-prebuild-step2[0m
+/bin/sh: hello: not found
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-prebuild-step2'. The execution of the pipeline has stopped.[0m
